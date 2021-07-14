@@ -1,0 +1,27 @@
+
+{%extends "layout.html" %}
+{%block content%}
+  
+<div class="container">
+  <center>
+    <div class="signup">
+      <a href>signup</a>
+      <div class="signup-main">
+        <h1>fgdjdsoirenjk</h1>
+        <h3 class="landing-desc">you are sigining up... why?</h3>
+        <form class="signup-form" method="POST">
+          <input class="signup-input" placeholder="api key" name="apikey" value="{{ apikey }}" style="color: #D6DCE4;" readonly>
+          <br>
+          <input class="signup-input" placeholder="app name" style="margin-top: 10px;" name="app_name">
+          <br>
+          <input class="signup-input" placeholder="password" style="margin-top: 10px;" name="password" type="password">
+          <button class="landing-button-poggers" type="submit">sign up</button>
+        </form>
+        <center>
+        </center>
+      </div>
+    </div>
+  </center>
+  
+</div>
+{% endblock %}

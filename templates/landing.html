@@ -1,0 +1,22 @@
+
+{%extends "layout.html" %}
+{%block content%}
+  
+<div class="container">
+  <div class="landing">
+    <div>
+      <h1 class="landing-title">Analytik</h1>
+      <h3 class="landing-desc">an analytics site i made for fun</h3>
+      <div style="display:flex;">
+        <a href="/get"><button class="landing-button-poggers">get an api key</button></a>
+        <a href="/dashboard"><button class="landing-button-poggers-gray">login</button></a>
+      </div>
+      <br>
+      <a href="/help" style="opacity: 0.3;">help collect more data</a>
+    </div>
+    <img src="{{ url_for('static', filename='mark.png') }}">
+  </div>
+  <script src="https://cknanalytics.ch1ck3n.repl.co/collect/v1/frttsDYp5n3aBFneXtiPK9LsXhstiNmObitLZSoQV8kl16BFL6"></script>
+  
+</div>
+{% endblock %}
