@@ -1,8 +1,8 @@
 [tool.poetry]
-name = "repl_python3_beta_cknanalytics"
+name = "repl_python3_beta_Analytik"
 version = "0.1.0"
 description = ""
-authors = ["Your Name <you@example.com>"]
+authors = ["Arjun C <arjun.c.1818@gmail.com"]
 
 [tool.poetry.dependencies]
 python = "^3.8"

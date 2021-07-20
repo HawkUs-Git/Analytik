@@ -285,3 +285,13 @@ hr {
   display: flex;
   flex-direction: column-reverse;
 }
+
+
+#landing-page{
+  background-color:#36393F;
+}
+
+.nav{
+  background-color:rgb(255, 2, 0);
+  color:Black;
+}

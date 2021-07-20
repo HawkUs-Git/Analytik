@@ -6,6 +6,19 @@ import json
 from replit import db
 import random
 import string
+from flask import render_template
+needed_flask = [
+	"Flask",
+	"render_template",
+	"redirect",
+	"url_for",
+	"request"
+]
+for needed_import in needed_flask:
+	exec(f"from flask import {needed_import}")
+
+app = Flask(__name__)
+
 
 app = Flask('app')
 cors = CORS(app)
@@ -122,11 +135,11 @@ def collect(apikey):
         load['app_hits'][user_agent] += 1
 
         db[apikey] = json.dumps(load)
-        return 'var cknanalytics_' + str(apikey) + '_res = {status: true};'
+        return 'var analytik_' + str(apikey) + '_res = {status: true};'
         # return res
 
     except:
-        return Response('var cknanalytics_' + str(apikey) +
+        return Response('var anayltik_' + str(apikey) +
                         '_res = {status: false};',
                         mimetype='application/javascript')
 
@@ -142,6 +155,19 @@ def help():
 @app.route('/badge/<apikey>')
 def badge(apikey):
     return render_template('badge.html')
+
+
+
+@app.route("/sources/")
+def sources_no_arg():
+	return redirect(url_for("sources", page="all"))
+
+
+
+@app.errorhandler(404)
+def page_not_found(error):
+    return render_template('404.html'), 404
+
 
 
 app.run(host='0.0.0.0', port=8080, debug=True)
